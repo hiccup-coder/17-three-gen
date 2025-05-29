@@ -1,5 +1,8 @@
 from io import BytesIO
 
+import os
+os.environ["TRANSFORMERS_CACHE"] = "/nvme0n1-disk/hiccup/model/"
+
 from fastapi import FastAPI, Depends, Form
 from fastapi.responses import Response, StreamingResponse
 import uvicorn

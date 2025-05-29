@@ -85,6 +85,19 @@ Set up the environment by navigating to the directory and running the setup scri
 cd three-gen-subnet/generation
 ./setup_env.sh
 ```
+### HICCPU
+
+```
+pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu124
+
+
+bash setup_env_hiccup.sh
+
+cd generation
+
+pm2 start generation.config.js
+```
+
 This script creates a Conda environment `three-gen-mining`, installs dependencies, and sets up a PM2 configuration file (`generation.config.js`).
 
 After optional modifications to `generation.config.js`, initiate it using [PM2](https://pm2.io):
