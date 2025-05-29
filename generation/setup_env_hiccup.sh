@@ -17,11 +17,13 @@ source $VENV_DIR/bin/activate
 echo -e "\n\n[INFO] Installing gaussian-rasterization package\n"
 pip install git+https://github.com/nerfstudio-project/gsplat.git@v1.4.0
 
-echo -e "\n\n[INFO] Installing MVDream package\n"
-pip install ./generation/extras/MVDream
+# HICCUP
+# echo -e "\n\n[INFO] Installing MVDream package\n"
+# pip install ./generation/extras/MVDream
 
-echo -e "\n\n[INFO] Installing ImageDream package\n"
-pip install ./generation/extras/ImageDream
+# HICCUP
+# echo -e "\n\n[INFO] Installing ImageDream package\n"
+# pip install ./generation/extras/ImageDream
 
 # Store the path of the venv Python interpreter
 VENV_INTERPRETER_PATH=$(which python)

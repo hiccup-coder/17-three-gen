@@ -1,7 +1,11 @@
 from io import BytesIO
 
 import os
+import sys
 os.environ["TRANSFORMERS_CACHE"] = "/nvme0n1-disk/hiccup/model/"
+print(f"PATH---{os.environ['TRANSFORMERS_CACHE']}")
+
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "extras/MVDream")))
 
 from fastapi import FastAPI, Depends, Form
 from fastapi.responses import Response, StreamingResponse
